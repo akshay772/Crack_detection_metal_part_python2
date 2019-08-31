@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 from werkzeug import secure_filename
-from urllib.request import urlopen
 from PIL import Image
 from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D, BatchNormalization
@@ -10,7 +9,6 @@ from keras.models import load_model, model_from_json
 
 import numpy as np
 import cv2
-import urllib
 import webcolors
 import time, os
 import sys, h5py
@@ -51,4 +49,4 @@ def train_cnn():
 
 
 if __name__ == '__main__':
-   app.run(debug=False)
+   app.run(debug=True)
